@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Selamat Datang  {{ session['username'] }}!</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload dan Prediksi</button>
+        </form>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
