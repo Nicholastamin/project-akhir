@@ -103,7 +103,7 @@ def predict():
     return render_template("result.html", class_name=class_name, confidence_score=confidence_score)
 
 if __name__ == "__main__":
-    # Buat tabel jika belum ada
+    
     with app.app_context():
         db.create_all()
     app.run(debug=True)
